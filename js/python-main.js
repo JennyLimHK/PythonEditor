@@ -514,14 +514,12 @@ function web_editor(config) {
             EDITOR.focus();
         } else {
             // If there's no name, default to something sensible.
-            setName('microbit program');
+            setName(config.initName);
             // A sane default starting point for a new script.
             EDITOR.setCode('# ' + config.translate.code.start + '\n' +
                 'from microbit import *\n\n\n' +
-                'while True:\n' +
-                '    display.scroll(\'Hello, World!\')\n' +
-                '    display.show(Image.HEART)\n' +
-                '    sleep(2000)\n');
+                config.initCode
+                );
         }
         window.setTimeout(function () {
             // What to do if the user changes the content of the editor.

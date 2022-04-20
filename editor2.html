@@ -234,6 +234,7 @@ Nicholas and Damien.
                     </div>
                     <div class="roundlabel">Disconnect</div>
                 </a>          
+            </a>
                 <a href="#" class="roundbutton action" id="command-files"
                     tabindex="30"
                     title="Load/Save files">
@@ -420,26 +421,6 @@ Nicholas and Damien.
         <script src="js/python-main.js"></script>
         <script>vex.defaultOptions.className = 'vex-theme-wireframe';</script>
         <script>
-
-            const params = new URLSearchParams(window.location.search);
-            tutorial = params.get("tutorial")
-            console.log(tutorial);
-
-            var defaultCode = 'while True:\n' +
-                '    display.scroll(\'Hello, IotPods!\')\n' +
-                '    display.show(Image.MUSIC_QUAVERS)\n' +
-                '    sleep(2000)\n'
-            var defaultName = 'microbit program'
-
-            var fireflyCode = 'import radio\n' +
-                'import random\n' +
-                'from microbit import display, Image, button_a, sleep\n'
-            var fireflyName = 'firefly'
-
-            var compassCode = 'from microbit import *\n' +
-                'import speech\n'
-            var compassName = 'compass'
-
             // Call the web_editor function to start the editor running.
             var config = {
                 translate: LANGUAGE,
@@ -449,28 +430,12 @@ Nicholas and Damien.
                     experimental: false,
                     checker: false,
                 },
-                initName: tutorial ? 
-                    (tutorial == 'firefly' ? 
-                        fireflyName 
-                        : (
-                        tutorial == 'compass' ? compassName : defaultName
-                        )
-                    )
-                    : defaultName,
-                //initCode: 'while True:\n' +
-                //'    display.scroll(\'Hello, IotPods!\')\n' +
-                //'    display.show(Image.MUSIC_NYAN)\n' +
-                //'    sleep(2000)\n',
-                initCode: tutorial ? 
-                    (tutorial == 'firefly' ? 
-                        fireflyCode 
-                        : (
-                        tutorial == 'compass' ? compassCode : defaultCode
-                        )
-                    )
-                    : defaultCode
+                initName: 'sensor program',
+                initCode: 'while True:\n' +
+                '    display.scroll(\'Hello, IotPods!\')\n' +
+                '    display.show(Image.MUSIC_NYAN)\n' +
+                '    sleep(2000)\n',
             };
-
             web_editor(config);
         </script>
         </main>

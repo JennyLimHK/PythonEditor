@@ -252,6 +252,83 @@ html[data-useragent*='MSIE 10.0'] .small-icons .status-icon {
   color: #4e9a06;
 }
 
+/* company name and logo */
+#masthead {
+  /*display: none;*/
+  /*background-color: #3758ce;*/
+  height: 75px;
+  padding: 0 20px;
+  position: relative;
+}
+
+#masthead img {
+  border: none;
+  outline: none;
+}
+
+.mb_logo {
+  position: absolute;
+  top: 1.2rem;
+}
+
+.python_logo {
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  height: 55px;
+  position: absolute;
+  top: 0.25rem;
+  right: 1rem;
+}
+
+#notif{
+  display:none;
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  /* the default width of borderLeftBottom and borderRightBottom is dependent on this */
+  left: 50%;
+  margin-left: -300px;
+  /* the default width of borderLeftBottom and borderRightBottom is dependent on this */
+  width: 620px;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-right: 2px solid #febf2e;
+  border-left: 2px solid #febf2e;
+  border-bottom: 2px solid #febf2e;
+}
+
+.closebtn{
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #3758ce;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover{
+  color:#febf2e;
+}
+
+#textnotif p{
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe WP Light", "Segoe WP", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  font-size:15px;
+  vertical-align: middle;
+  text-align: center;
+  padding: 1px;
+  margin: 9px;
+}
+
+.hidden{
+  display: none;
+}
+
 /* Buttons */
 .roundbutton {
   display: -webkit-flex;
@@ -262,13 +339,37 @@ html[data-useragent*='MSIE 10.0'] .small-icons .status-icon {
   flex-direction: column;
   color: #336699;
   text-decoration: none;
-  background-image: url("../img/triangle.svg");
+  background-image: url("../img/triangle3.svg");
   background-position-x: -1px;
   background-size: 100%;
   background-repeat: no-repeat;
   min-width: 90px;
   max-width: 90px;
   max-height: 113px;
+}
+
+.roundImg {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #336699;
+  text-decoration: none;
+  /*background-image: url("../img/triangle.svg");*/
+  /*background-position-x: -1px;*/
+  /*background-size: 100%;*/
+  /*background-repeat: no-repeat;*/
+  min-width: 90px;
+  min-height: 90px;
+  max-width: 113px;
+  max-height: 113px;
+  border-radius:50%;
+  width: 100%;
+  height: auto;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 .disabled div.roundsymbol {
@@ -287,6 +388,7 @@ html[data-useragent*='MSIE 10.0'] .small-icons .status-icon {
   width: 4rem;
   height: 4rem;
   border: 6px solid #FFCC33;
+  /*border: 6px solid #FE735C;*/
   border-radius: 50%;
   margin: .2rem;
   margin-bottom: 0;
@@ -330,13 +432,14 @@ html[data-useragent*='MSIE 10.0'] .small-icons .status-icon {
 }
 
 .roundbutton:focus, .roundbutton:active {
-  background-image: url("../img/triangle2.svg");
+  background-image: url("../img/triangle3.svg");
 }
 
 .roundlabel {
   padding-top: .3rem;
   padding-bottom: .3rem;
   font-size: 80%;
+  font-weight: bold;
   text-align: center;
   color: #336699;
   text-shadow:   -1px -1px #f2f2f2, 1px -1px #f2f2f2, -1px 1px #f2f2f2, 1px 1px #f2f2f2;
